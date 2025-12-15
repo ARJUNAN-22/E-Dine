@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍽️ E‑Dine</title>
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navbar / Hero header -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="team logo.jpg" alt="E‑Dine Logo" class="brand-logo" />
+        <div>
+          <h1 class="brand-title">E‑Dine</h1>
+          <p class="brand-tagline">Smart e‑dining for modern restaurants</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#biriyani">Biriyani</a>
+        <a href="#starters">Starters</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#cart">Cart</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Hero strip -->
+    <div class="hero-strip">
+      <div class="hero-text">
+        <span class="hero-pill">New · Digital Dining</span>
+        <h2>Order from your table in seconds.</h2>
+        <p>Scan, select, and enjoy freshly prepared dishes without waiting for staff.</p>
+      </div>
+      <div class="hero-highlight">
+        <span class="hero-badge">Live Orders</span>
+        <p>Fast service · Real‑time kitchen updates · Simple billing</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Biriyani section -->
+    <section class="menu-section" id="biriyani">
+      <div class="section-header">
+        <h2>Biriyani Specials</h2>
+        <p>Slow‑cooked flavours served hot from the kitchen.</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="item-card" data-name="Chicken Biriyani" data-price="219">
+          <div class="item-image-wrap">
+            <img src="Chicken Biriyani.webp" alt="Chicken Biriyani" />
+            <span class="item-tag">Best Seller</span>
+          </div>
+          <div class="item-body">
+            <h3>Chicken Biriyani</h3>
+            <p class="item-meta">Aromatic basmati rice with tender chicken.</p>
+            <div class="item-footer">
+              <span class="item-price">₹219</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Mutton Biriyani" data-price="249">
+          <div class="item-image-wrap">
+            <img src="mutton biriyani.webp" alt="Mutton Biriyani" />
+          </div>
+          <div class="item-body">
+            <h3>Mutton Biriyani</h3>
+            <p class="item-meta">Rich, flavourful mutton cooked to perfection.</p>
+            <div class="item-footer">
+              <span class="item-price">₹249</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Prawn Biriyani" data-price="279">
+          <div class="item-image-wrap">
+            <img src="Prawn Biriyani.webp" alt="Prawn Biriyani" />
+          </div>
+          <div class="item-body">
+            <h3>Prawn Biriyani</h3>
+            <p class="item-meta">Delicate prawns layered with spiced rice.</p>
+            <div class="item-footer">
+              <span class="item-price">₹279</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Fish Biriyani" data-price="239">
+          <div class="item-image-wrap">
+            <img src="Fish Biriyani.webp" alt="Fish Biriyani" />
+          </div>
+          <div class="item-body">
+            <h3>Fish Biriyani</h3>
+            <p class="item-meta">Light and fragrant biriyani with fresh fish.</p>
+            <div class="item-footer">
+              <span class="item-price">₹239</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Veg Biriyani" data-price="179">
+          <div class="item-image-wrap">
+            <img src="Veg Biriyani.webp" alt="Veg Biriyani" />
+          </div>
+          <div class="item-body">
+            <h3>Veg Biriyani</h3>
+            <p class="item-meta">Loaded with seasonal veggies and spices.</p>
+            <div class="item-footer">
+              <span class="item-price">₹179</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Starters -->
+    <section class="menu-section" id="starters">
+      <div class="section-header">
+        <h2>Starters</h2>
+        <p>Begin your meal with crispy, juicy bites.</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="item-card" data-name="Fish Fry" data-price="239">
+          <div class="item-image-wrap">
+            <img src="Fish Fry.jpg" alt="Fish Fry" />
+          </div>
+          <div class="item-body">
+            <h3>Fish Fry</h3>
+            <p class="item-meta">Crispy coastal‑style fish fry.</p>
+            <div class="item-footer">
+              <span class="item-price">₹239</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Kebab" data-price="219">
+          <div class="item-image-wrap">
+            <img src="kebab.webp" alt="Kebab" />
+          </div>
+          <div class="item-body">
+            <h3>Kebab</h3>
+            <p class="item-meta">Char‑grilled minced meat skewers.</p>
+            <div class="item-footer">
+              <span class="item-price">₹219</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Grill Chicken" data-price="249">
+          <div class="item-image-wrap">
+            <img src="grill chicken.webp" alt="Grill Chicken" />
+          </div>
+          <div class="item-body">
+            <h3>Grill Chicken</h3>
+            <p class="item-meta">Juicy grilled chicken with spice rub.</p>
+            <div class="item-footer">
+              <span class="item-price">₹249</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Fried Chicken" data-price="299">
+          <div class="item-image-wrap">
+            <img src="Fried Chicken.webp" alt="Fried Chicken" />
+          </div>
+          <div class="item-body">
+            <h3>Fried Chicken</h3>
+            <p class="item-meta">Crispy, golden fried chicken pieces.</p>
+            <div class="item-footer">
+              <span class="item-price">₹299</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Paneer Tikka" data-price="219">
+          <div class="item-image-wrap">
+            <img src="Paneer Tikka.webp" alt="Paneer Tikka" />
+          </div>
+          <div class="item-body">
+            <h3>Paneer Tikka</h3>
+            <p class="item-meta">Smoky paneer cubes with veggies.</p>
+            <div class="item-footer">
+              <span class="item-price">₹219</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drinks -->
+    <section class="menu-section" id="drinks">
+      <div class="section-header">
+        <h2>Beverages</h2>
+        <p>Coolers and shakes to complete your meal.</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="item-card" data-name="Mojito" data-price="20">
+          <div class="item-image-wrap">
+            <img src="Mojito.webp" alt="Mojito" />
+          </div>
+          <div class="item-body">
+            <h3>Mojito</h3>
+            <p class="item-meta">Refreshing lime & mint cooler.</p>
+            <div class="item-footer">
+              <span class="item-price">₹20</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Berry cocktail" data-price="25">
+          <div class="item-image-wrap">
+            <img src="Berry cocktail.jpg" alt="Berry cocktail" />
+          </div>
+          <div class="item-body">
+            <h3>Berry Cocktail</h3>
+            <p class="item-meta">Mixed berry mocktail with ice.</p>
+            <div class="item-footer">
+              <span class="item-price">₹25</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Ginger soda" data-price="25">
+          <div class="item-image-wrap">
+            <img src="Ginger soda.webp" alt="Ginger Soda" />
+          </div>
+          <div class="item-body">
+            <h3>Ginger Soda</h3>
+            <p class="item-meta">Zesty ginger fizz.</p>
+            <div class="item-footer">
+              <span class="item-price">₹25</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="Cold Coffee" data-price="30">
+          <div class="item-image-wrap">
+            <img src="cold coffee.webp" alt="Cold Coffee" />
+          </div>
+          <div class="item-body">
+            <h3>Cold Coffee</h3>
+            <p class="item-meta">Iced coffee with cream.</p>
+            <div class="item-footer">
+              <span class="item-price">₹30</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-card" data-name="vanilla shake" data-price="25">
+          <div class="item-image-wrap">
+            <img src="vanilla shake.jpg" alt="Vanilla Shake" />
+          </div>
+          <div class="item-body">
+            <h3>Vanilla Shake</h3>
+            <p class="item-meta">Classic thick vanilla shake.</p>
+            <div class="item-footer">
+              <span class="item-price">₹25</span>
+              <button onclick="addToCart(this)" class="btn small">
+                <i class="fas fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart -->
+    <section class="cart-section" id="cart">
+      <div class="cart-card">
+        <div class="cart-left">
+          <h2>Your Cart</h2>
+          <ul id="cart-list" class="cart-list"></ul>
+          <div class="cart-total-row">
+            <span>Total</span>
+            <span class="cart-total">₹<span id="total">0</span></span>
+          </div>
+        </div>
+
+        <div class="cart-right">
+          <h3>Place your order</h3>
+          <p class="cart-note">Enter your details to confirm your order (demo only).</p>
+
+          <form id="order-form" class="order-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="text" name="table" placeholder="Table Number" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <button type="submit" class="btn primary full">
+              <i class="fas fa-paper-plane"></i> Confirm Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <h3 class="footer-title">ARJUNAN.KS</h3>
+      <p class="footer-tagline">
+        Crafting frontend experiences with code & creativity ✨
+      </p>
+
+      <div class="social-icons">
+        <a href="https://github.com/ARJUNAN-22" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/arjunan-k-s-19b099292"
+           target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/_arjun_grey"
+           target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:arjunkarthi1406@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy">© 2025 Arjunan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
